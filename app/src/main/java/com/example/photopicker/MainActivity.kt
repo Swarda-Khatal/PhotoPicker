@@ -42,6 +42,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PhotoPickerDemo() {
+
+    //rememberSaveable will keep the data on configuration change
+    //remember will keep data on every recomposition
     var selectedImage by rememberSaveable(inputs = emptyArray()) {
         mutableStateOf<Uri?>(null)
     }
